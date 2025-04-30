@@ -1,20 +1,20 @@
-
-import type {User} from '../features/userSlice'
-import UserCard from './UserCard';
+import type { User } from "../features/usersSlice";
+import UserCard from "./UserCard";
 
 type ListOfUsersProps = {
-    users:User[]
-}
+  users: User[];
+};
 
-const ListOfUsers = ({users}:ListOfUsersProps) => {
+const ListOfUsers = ({ users }: ListOfUsersProps) => {
   return (
     <>
       <h1>Users</h1>
       <ol>
-        {users.map((user)=>
-            <li><UserCard user={user}/></li>
-        )}
-
+        {users.map((user) => (
+          <li>
+            <UserCard user={user} />
+          </li>
+        ))}
       </ol>
     </>
   );
